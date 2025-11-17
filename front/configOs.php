@@ -5,6 +5,12 @@ global $DB;
 
 $OsId = $_GET['id'] ?? 0;
 if (!$OsId) die("ID do ticket não fornecido.");
+global $EmpresaPlugin, $CnpjPlugin, $EnderecoPlugin, $TelefonePlugin, $CidadePlugin, $SitePlugin;
+global $OsNome, $OsDescricao, $DataOs, $OsData, $OsDataEntrega, $OsSolucao, $OsResponsavel;
+global $EntidadeName, $EntidadeCep, $EntidadeEndereco, $EntidadeEmail, $EntidadePhone, $EntityRn;
+global $CustoTotal, $CustoTotalFinal, $UserName, $ItensId, $ItemType;
+global $ComputerName, $ComputerSerial, $MonitorName, $MonitorSerial, $PrinterName, $PrinterSerial;
+global $OsId;
 
 $Plugin = $DB->request('glpi_plugin_os_config')->current();
 $EmpresaPlugin   = $Plugin['name'] ?? "";
